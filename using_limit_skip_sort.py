@@ -24,7 +24,7 @@ def find():
 		print "Unexpected error:", sys.exc_info()[0]
 
 	sanity = 0
-	for doc in cursor:
+	for doc in cursor:  # once you run through the query, this is when mongo begins sort, then skip, then limit
 		print doc
 		# sanity += 1
 		# if (sanity > 10):
