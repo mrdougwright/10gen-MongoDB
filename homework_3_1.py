@@ -9,6 +9,9 @@ import sys
 # establish a connection to the database
 connection = pymongo.Connection("mongodb://localhost", safe=True)
 
+# new pymongo syntax:
+connection = pymongo.MongoClient(host="mongodb://localhost:27017", w=1, j=True)
+
 # get a handle to the school databse
 db=connection.school
 students = db.students
